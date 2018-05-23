@@ -223,7 +223,6 @@ export class LineChartComponent extends BaseChartComponent {
   timelineXDomain: any;
   timelineTransform: any;
   timelinePadding: number = 10;
-  isRtl:boolean = false;
 
   update(): void {
     super.update();
