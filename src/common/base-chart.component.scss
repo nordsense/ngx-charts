@@ -110,14 +110,17 @@
 
 }
 
-:host-context(.ltr) .ngx-charts {
+:host-context(.ltr) ::ng-deep .ngx-charts {
   float: left;
-  transform: scaleX(-1); 
 }
 
 
-:host-context(.rtl) .ngx-charts {
+:host-context(.rtl) ::ng-deep .ngx-charts {
   float: right;
   transform: scaleX(-1); 
+}
+
+:host-context(.rtl) ::ng-deep ngx-charts-y-axis-ticks:nth-child(1) {
+  transform: scaleX(-1) !important;
 }
 
