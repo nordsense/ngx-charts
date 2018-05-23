@@ -1,5 +1,4 @@
 .ngx-charts {
-  float: left;
   overflow: visible;
 
   .circle,
@@ -111,13 +110,14 @@
 
 }
 
-
-:host-context(.rtl) ::ng-deep .ngx-charts {
-  float: right;
+:host-context(.ltr) .ngx-charts {
+  float: left;
   transform: scaleX(-1); 
 }
 
-:host-context(.rtl) ::ng-deep ngx-charts-y-axis-ticks:nth-child(1) {
-  transform: scaleX(-1) !important;
+
+:host-context(.rtl) .ngx-charts {
+  float: right;
+  transform: scaleX(-1); 
 }
 
