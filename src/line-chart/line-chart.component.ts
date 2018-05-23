@@ -27,7 +27,6 @@ import { id } from '../utils/id';
   selector: 'ngx-charts-line-chart',
   template: `
     <ngx-charts-chart
-      [isRtl]="isRtl"
       [view]="[width, height]"
       [showLegend]="legend"
       [legendOptions]="legendOptions"
