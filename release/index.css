@@ -72,14 +72,16 @@
   .ngx-charts .grid-panel.odd rect {
     fill: rgba(0, 0, 0, 0.05); }
 
-:host-context(.ltr) .ngx-charts {
-  float: left;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1); }
+:host-context(.ltr) ::ng-deep .ngx-charts {
+  float: left; }
 
-:host-context(.rtl) .ngx-charts {
+:host-context(.rtl) ::ng-deep .ngx-charts {
   float: right;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1); }
+
+:host-context(.rtl) ::ng-deep ngx-charts-y-axis-ticks:nth-child(1) {
+  -webkit-transform: scaleX(-1) !important;
+          transform: scaleX(-1) !important; }
 
 /*# sourceMappingURL=index.map*/
