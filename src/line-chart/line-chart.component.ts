@@ -27,6 +27,7 @@ import { id } from '../utils/id';
   selector: 'ngx-charts-line-chart',
   template: `
     <ngx-charts-chart
+      [isRtl]="isRtl"
       [view]="[width, height]"
       [showLegend]="legend"
       [legendOptions]="legendOptions"
@@ -186,6 +187,7 @@ export class LineChartComponent extends BaseChartComponent {
   @Input() xScaleMax: any;
   @Input() yScaleMin: number;
   @Input() yScaleMax: number;
+  @Input() isRtl: boolean = false;
 
   @Output() activate: EventEmitter<any> = new EventEmitter();
   @Output() deactivate: EventEmitter<any> = new EventEmitter();
@@ -221,6 +223,7 @@ export class LineChartComponent extends BaseChartComponent {
   timelineXDomain: any;
   timelineTransform: any;
   timelinePadding: number = 10;
+  isRtl:boolean = false;
 
   update(): void {
     super.update();
@@ -263,6 +266,8 @@ export class LineChartComponent extends BaseChartComponent {
 
     this.clipPathId = 'clip' + id().toString();
     this.clipPath = `url(#${this.clipPathId})`;
+
+    console.log('Rtl is this ', this.isRtl);
   }
 
   updateTimeline(): void {
