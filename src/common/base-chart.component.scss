@@ -1,5 +1,4 @@
 .ngx-charts {
-  float: left;
   overflow: visible;
 
   .circle,
@@ -109,4 +108,14 @@
     }
   }
 
+}
+
+
+:host-context(.ltr) ::ng-deep .ngx-charts {
+  float: left;
+}
+
+:host-context(.rtl) ::ng-deep .ngx-charts {
+  float: right;
+  transform: scaleX(-1); 
 }
